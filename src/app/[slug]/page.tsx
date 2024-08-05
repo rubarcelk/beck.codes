@@ -1,10 +1,12 @@
-import { FrontmatterType, noteFilePaths, NOTES_PATH } from "@/utils/mdxUtils";
-import matter from "gray-matter";
-import { compileMDX, MDXRemote } from "next-mdx-remote/rsc";
-import { serialize } from "next-mdx-remote/serialize";
-import { notFound } from "next/navigation";
-import path from "node:path";
 import fs from "node:fs";
+import path from "node:path";
+import {
+  type FrontmatterType,
+  NOTES_PATH,
+  noteFilePaths,
+} from "@/utils/mdxUtils";
+import { compileMDX } from "next-mdx-remote/rsc";
+import { notFound } from "next/navigation";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const filePath = path.join(NOTES_PATH, `${params.slug}.mdx`);
