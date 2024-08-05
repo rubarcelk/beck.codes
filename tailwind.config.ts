@@ -7,5 +7,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   plugins: [],
+  theme: {
+    extend: {
+      maxWidth: { prose: "72ch" },
+    },
+  },
 };
 export default config;
