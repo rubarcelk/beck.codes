@@ -15,5 +15,6 @@ export async function generateStaticParams() {
       .map((path) => path.replace(/\.mdx?$/, ""))
       .map((slug) => ({ params: { slug } }));
   const notePaths = getSlugParams(noteFilePaths);
+  console.log("Found mdx files: ", notePaths);
   return notePaths;
 }
