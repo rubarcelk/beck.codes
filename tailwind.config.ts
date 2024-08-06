@@ -6,11 +6,11 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  plugins: [],
   theme: {
     extend: {
       maxWidth: { prose: "72ch" },
     },
   },
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

@@ -27,7 +27,7 @@ export default async function Home() {
       <h2 className="text-2xl mt-6">Digital Garden</h2>
       <p>My small digital garden.</p>
       <h3 className="text-lg mt-4">Notes</h3>
-      <section>
+      <section className="grid grid-cols-2 lg:grid-cols-4">
         {notes.map((note) => (
           <Link href={note.slug} key={note.slug} className="underline">
             {note.frontmatter.title}

@@ -21,8 +21,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
     options: { parseFrontmatter: true },
   });
   return (
-    <main className="min-h-screen p-24 max-w-prose container mx-auto">
-      {content}
+    <main className="min-h-screen p-24 container mx-auto">
+      <article className="prose lg:prose-xl prose-slate dark:prose-invert">
+        <h1>{frontmatter.title}</h1>
+        {content}
+      </article>
     </main>
   );
 }
